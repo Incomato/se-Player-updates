@@ -1,10 +1,8 @@
 {
-  "hosting": [
-    {
-      "target": "updates",
-      "public": "hosting_updates",
-      "ignore": ["**/.*", "**/node_modules/**"],
-      "cleanUrls": true
-    }
-  ]
+  "hosting": {
+    "site": "capogamestudio--se-player-c1221",
+    "public": "hosting_updates",
+    "ignore": ["**/.*", "**/node_modules/**"],
+    "cleanUrls": true
+  }
 }
