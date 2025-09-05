@@ -1,0 +1,25 @@
+{
+  "hosting": [
+    {
+      "target": "web",
+      "public": "dist",
+      "ignore": ["**/.*", "**/node_modules/**"],
+      "rewrites": [{ "source": "**", "destination": "/index.html" }],
+      "headers": [
+        { "source": "/assets/**", "headers": [{ "key": "Cache-Control", "value": "public,max-age=31536000,immutable" }] },
+        { "source": "/index.html", "headers": [{ "key": "Cache-Control", "value": "no-cache" }] }
+      ]
+    },
+    {
+      "target": "updates",
+      "public": "hosting_updates",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "cleanUrls": true,
+      "headers": [
+        { "source": "/updates/win/latest.yml", "headers": [{ "key": "Cache-Control", "value": "no-cache" }] },
+        { "source": "/updates/win/*.exe",      "headers": [{ "key": "Cache-Control", "value": "public,max-age=31536000,immutable" }] },
+        { "source": "/updates/win/*.blockmap", "headers": [{ "key": "Cache-Control", "value": "public,max-age=31536000,immutable" }] }
+      ]
+    }
+  ]
+}
