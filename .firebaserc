@@ -1,0 +1,12 @@
+{
+  "projects": { "default": "se-player-c1221" },
+  "targets": {
+    "se-player-c1221": {
+      "hosting": {
+        "updates": [
+          "capogamestudio--se-player-c1221"   // oder dein Hosting-Site-Name
+        ]
+      }
+    }
+  }
+}
