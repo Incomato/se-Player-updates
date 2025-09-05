@@ -1,8 +1,13 @@
 {
   "hosting": {
-    "site": "capogamestudio--se-player-c1221",
     "public": "hosting_updates",
-    "ignore": ["**/.*", "**/node_modules/**"],
-    "cleanUrls": true
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [],
+    "headers": [
+      {
+        "source": "**/*.yml",
+        "headers": [{ "key": "Content-Type", "value": "text/yaml; charset=utf-8" }]
+      }
+    ]
   }
 }
